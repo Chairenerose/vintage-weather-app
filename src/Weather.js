@@ -1,14 +1,18 @@
 import React from "react";
+import './App.css';
+
 
 export default function Weather() {
     return (
         <div className="WeatherText" style={{
             backgroundImage: "url(../img/Sky.jpg)",
             backgroundRepeat: "no-repeat ",
-            backgroundSize: "cover"
-
+            backgroundSize: "cover",
+            borderRadius: 7
         }}>
-            <h1>New York City</h1>
+
+
+            <h1>Barcelona</h1>
             <ul>
                 <li>Monday 20:00</li>
                 <li>Mostly Cloudy</li>
@@ -16,9 +20,9 @@ export default function Weather() {
 
             <div className="row">
                 <div className="col-6">
-                    <img src="https://iconarchive.com/download/i45469/iconka/magic-weather/cloudiness.ico" alt="Golden Sun" />
-                    2°C
-               </div>
+                    <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Golden Sun" />
+                    <span className="temperature">20</span><span>°C|°F</span>
+                </div>
 
                 <div className="col-6">
                     <ul>

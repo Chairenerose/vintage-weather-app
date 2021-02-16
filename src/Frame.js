@@ -3,7 +3,7 @@ import Weather from './Weather';
 
 export default function Frame() {
     return (
-        <div>
+        <div className="WeatherLayout">
             <Weather />
             <form>
                 <input type="search" placeholder="Enter a city..." className="form-control" />

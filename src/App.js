@@ -9,11 +9,14 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Vintage Weather App</h1>
+        <div className="myHeader">
+          <span className="title1"> WTHR</span>
+          <span className="title2"> Application</span>
+        </div>
         <Frame />
         <p>
           Created by Chairene Chidozie <br />
-        My <a href="https://github.com/Chairenerose/vintage-weather-app" target="_blank">Open-sourced Code</a>
+        My <a href="https://github.com/Chairenerose/vintage-weather-app" target="_blank" id="githublink">Open-sourced Code</a>
         </p>
       </div>
     </div>
