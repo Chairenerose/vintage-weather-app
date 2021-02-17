@@ -79,12 +79,11 @@ body {
  .btn-dark {
    margin-top: 10px;
    margin-left: 40px;
-   border-radius: 50%;
    background: rgb(204,153,102);
    background: radial-gradient(circle, rgba(204, 153, 102, 0.486) 0%, rgba(61, 35, 20, 0.479) 100%);
    border: rgb(204,153,102);
-   color: #3d2314;
-   font-family:'Playfair Display', serif;
+   color: #ffffff;
+   font-family:'Raleway', sans-serif;
 }
 
 p {
