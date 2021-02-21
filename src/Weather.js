@@ -45,6 +45,17 @@ export default function Weather(props) {
 
             <div className="Frame">
                 <WeatherInfo data={weatherData} />
+
+                <a href="#" className="scroll-down">
+                    <div className="mouse">
+                        <span></span>
+                    </div>
+
+                    <div className="arrow">
+                        <span></span>
+                    </div>
+                </a>
+
                 <Forecast city={weatherData.city} />
                 <br />
                 <div className="Searchengine">

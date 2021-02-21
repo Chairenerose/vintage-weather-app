@@ -78,7 +78,7 @@ body {
 
  .btn-dark {
    margin-top: 10px;
-   margin-left: 40px;
+   margin-left: 65px;
    background: rgb(204,153,102);
    background: radial-gradient(circle, rgba(204, 153, 102, 0.486) 0%, rgba(61, 35, 20, 0.479) 100%);
    border: rgb(204,153,102);
@@ -98,5 +98,56 @@ a:link {
 
 a:visited {
     color:white;
+}
+
+
+
+.mouse{
+    width: 2.5rem;
+    height: 5rem;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    margin-bottom: .5rem;
+    display: flex;
+}
+
+.mouse span{
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    display: block;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-wheel 1s linear infinite;
+}
+.scroll-down {
+    position: relative;
+    bottom: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow span{
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid transparent;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+    transform: rotate(45deg);
+}
+
+@keyframes move-wheel {
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
 }
 
