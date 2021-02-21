@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import WeatherIcon from "./WeatherIcon";
+import ForecastPreview from "./ForecastPreview";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -10,16 +10,19 @@ export default function Forecast(props) {
     }
     const [loaded, setLoaded] = useState(false);
     const [forecast, setForecast] = useState(null);
+
+
     function handleForecastResponse(response) {
         setForecast(response.data);
         setLoaded(true);
 
 
+
     }
 
-    if (loaded) {
-        let myforecast = Math.round(forecast.list[0].main.temp);
+    if (loaded && props.city === forecast.city.name) {
         return (
+
             <div className="Forecast">
                 <div className={`forecastBackground forecastShowing-${showPop}`} style={{
                     backgroundImage: "url(../img/Sky.jpg)",
@@ -27,15 +30,22 @@ export default function Forecast(props) {
                     borderRadius: 7,
                     backgroundRepeat: "no-repeat"
                 }}>
-                    <WeatherIcon code={forecast.list[0].weather[0].icon} />
-                    {myforecast}
+                    <div className="Popcast row">
+                        <ForecastPreview data={forecast.list[0]} />
+                        <ForecastPreview data={forecast.list[1]} />
+                        <ForecastPreview data={forecast.list[2]} />
+                        <ForecastPreview data={forecast.list[3]} />
+                        <ForecastPreview data={forecast.list[4]} />
+                        <ForecastPreview data={forecast.list[5]} />
+                    </div>
+
 
                 </div>
                 <button onClick={() => managePop()}>See Forecast</button>
             </div>
         );
     } else {
-        let apiKey = "26dddc2844f26171cf43bb8923cb9f4b";
+        let apiKey = "b40b1170719118f550e945ff17d55d7a";
         let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
         axios.get(url).then(handleForecastResponse);
 

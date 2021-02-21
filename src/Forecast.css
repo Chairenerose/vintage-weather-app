@@ -2,11 +2,13 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity 1s ease-in-out;
+    
 }
 
 .forecastShowing-true {
     opacity: 1;
     pointer-events: showing;
+    margin-bottom: 20px;
 }
 
  button {
@@ -19,4 +21,16 @@
    color: #ffffff;
    font-family:'Raleway', sans-serif;
    font-size: 20px;
+}
+
+.Forecast canvas {
+    display: block;
+    margin: 5px auto;
+    width: 50px;
+    
+}
+
+
+.Popcast {
+    text-align: center;
 }

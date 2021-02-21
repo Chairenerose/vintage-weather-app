@@ -17,7 +17,7 @@ export default function Weather(props) {
             humidity: response.data.main.humidity,
             precipitation: 9,
             city: response.data.name,
-            iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            icon: response.data.weather[0].icon,
             description: response.data.weather[0].description,
             date: new Date(response.data.dt * 1000),
         })
@@ -25,8 +25,8 @@ export default function Weather(props) {
     }
 
     function engine() {
-        const apiKey = "26dddc2844f26171cf43bb8923cb9f4b";
-        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+        const apiKey = "b40b1170719118f550e945ff17d55d7a";
+        let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
     }
 
