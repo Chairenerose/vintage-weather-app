@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import WeatherIcon from "./WeatherIcon";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -26,7 +27,7 @@ export default function Forecast(props) {
                     borderRadius: 7,
                     backgroundRepeat: "no-repeat"
                 }}>
-
+                    <WeatherIcon code={forecast.list[0].weather[0].icon} />
                     {myforecast}
 
                 </div>
