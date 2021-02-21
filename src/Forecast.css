@@ -1,0 +1,22 @@
+.forecastBackground {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.forecastShowing-true {
+    opacity: 1;
+    pointer-events: showing;
+}
+
+ button {
+   margin: 0 auto;
+   display: block;
+   background: rgb(204,153,102);
+   background: radial-gradient(circle, rgba(204, 153, 102, 0.486) 0%, rgba(61, 35, 20, 0.479) 100%);
+   border: rgb(204,153,102);
+   border-radius: 5px;
+   color: #ffffff;
+   font-family:'Raleway', sans-serif;
+   font-size: 20px;
+}

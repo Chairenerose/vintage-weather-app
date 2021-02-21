@@ -10,5 +10,5 @@ export default function Dateinfo(props) {
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-    return `${day} ${hours}:${minutes}`;
+    return (`${day} ${hours}:${minutes}`);
 }
