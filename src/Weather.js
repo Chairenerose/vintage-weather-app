@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Dateinfo from './Dateinfo';
+import WeatherInfo from "./WeatherInfo";
 import './App.css';
 import axios from "axios";
 
@@ -41,41 +41,9 @@ export default function Weather(props) {
     }
     if (weatherData.ready) {
         return (
+
             <div className="Frame">
-
-                <div className="WeatherText" style={{
-                    backgroundImage: "url(../img/Sky.jpg)",
-                    backgroundSize: "cover",
-                    borderRadius: 7,
-                    backgroundRepeat: "no-repeat"
-                }}>
-                    <div className="cloud" style={{
-                        backgroundImage: "url(../img/cloud.png)",
-                        borderRadius: 8,
-                    }}>
-
-                        <h1>{weatherData.city}</h1>
-                        <ul>
-                            <li><Dateinfo date={weatherData.date} /></li>
-                            <li>{weatherData.description}</li>
-                        </ul>
-
-                        <div className="row">
-                            <div className="col-6">
-                                <img src={weatherData.iconUrl} alt={weatherData.description} />
-                                <span className="temperature">{Math.round(weatherData.temperature)}</span><span>°C|°F</span>
-                            </div>
-
-                            <div className="col-6">
-                                <ul>
-                                    <li> <i className="fas fa-cloud-showers-heavy"></i> Precipitation: {weatherData.precipitation}%</li>
-                                    <li> <i className="fas fa-tint"></i> Humidity: {weatherData.humidity}%</li>
-                                    <li> <i className="fas fa-wind"></i> Wind: {weatherData.wind} km/h</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <WeatherInfo data={weatherData} />
 
                 <div className="Searchengine">
                     <form onSubmit={handleSubmit}>
@@ -84,8 +52,6 @@ export default function Weather(props) {
                     </form>
 
                 </div>
-
-
             </div>
 
         )
