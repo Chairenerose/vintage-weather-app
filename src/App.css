@@ -100,7 +100,10 @@ a:visited {
     color:white;
 }
 
-
+#Weatherinfo canvas{
+    width: 60px;
+    padding-left: 10px;
+}
 
 .mouse{
     width: 2.5rem;
