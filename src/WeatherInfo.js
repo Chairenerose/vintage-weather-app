@@ -33,7 +33,6 @@ export default function WeatherInfo(props) {
 
                         <div className="col-6">
                             <ul>
-                                <li> <i className="fas fa-cloud-showers-heavy"></i> Precipitation: {props.data.precipitation}%</li>
                                 <li> <i className="fas fa-tint"></i> Humidity: {props.data.humidity}%</li>
                                 <li> <i className="fas fa-wind"></i> Wind: {props.data.wind} km/h</li>
                             </ul>
